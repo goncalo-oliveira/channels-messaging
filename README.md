@@ -1,6 +1,6 @@
 # Channels Messaging
 
-Messaging support for Channels.
+Messaging support for [Channels](https://github.com/goncalo-oliveira/channels).
 
 This package provides a simple publish/subscribe abstraction that allows messages to be exchanged between channel instances and external components.
 
