@@ -1,0 +1,30 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net10.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+
+    <RootNamespace>Faactory.Channels.Messaging</RootNamespace>
+    <AssemblyName>faactory.channels.messaging</AssemblyName>
+    <PackageId>Faactory.Channels.Messaging</PackageId>
+    <Version>0.1.0</Version>
+    <Authors>Goncalo Oliveira</Authors>
+    <Description>Channels Messaging</Description>
+    <RepositoryUrl>https://github.com/goncalo-oliveira/channels-messaging</RepositoryUrl>
+    <PackageLicenseExpression>Apache-2.0</PackageLicenseExpression>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
+    <PackageIcon>faactory.png</PackageIcon>
+    <GenerateDocumentationFile>true</GenerateDocumentationFile>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Faactory.Channels.Core" Version="2.8.2" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="../README.md" Pack="true" PackagePath="/" />
+    <None Include="../faactory.png" Pack="true" PackagePath="/"/>
+  </ItemGroup>
+
+</Project>
