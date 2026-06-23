@@ -1,4 +1,4 @@
-﻿<Project Sdk="Microsoft.NET.Sdk">
+<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <TargetFramework>net10.0</TargetFramework>
@@ -8,7 +8,7 @@
     <RootNamespace>Faactory.Channels.Messaging</RootNamespace>
     <AssemblyName>faactory.channels.messaging</AssemblyName>
     <PackageId>Faactory.Channels.Messaging</PackageId>
-    <Version>0.1.0</Version>
+    <Version>0.1.1</Version>
     <Authors>Goncalo Oliveira</Authors>
     <Description>Channels Messaging</Description>
     <RepositoryUrl>https://github.com/goncalo-oliveira/channels-messaging</RepositoryUrl>
@@ -24,7 +24,7 @@
 
   <ItemGroup>
     <None Include="../README.md" Pack="true" PackagePath="/" />
-    <None Include="../faactory.png" Pack="true" PackagePath="/"/>
+    <None Include="../faactory.png" Pack="true" PackagePath="/" />
   </ItemGroup>
 
 </Project>
