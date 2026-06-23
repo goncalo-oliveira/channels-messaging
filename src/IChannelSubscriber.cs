@@ -8,19 +8,7 @@ public interface IChannelSubscriber
     /// <summary>
     /// Subscribes to channel messages.
     /// </summary>
+    /// <param name="channelId">The identifier of the channel to subscribe to. If null, subscribes to all messages.</param>
     /// <returns>An <see cref="IChannelSubscription"/> that can be used to read messages.</returns>
-    IChannelSubscription Subscribe();
-}
-
-/// <summary>
-/// Represents a subscription to channel messages that can be read asynchronously.
-/// </summary>
-public interface IChannelSubscription : IAsyncDisposable
-{
-    /// <summary>
-    /// Reads all channel messages asynchronously.
-    /// </summary>
-    /// <param name="cancellationToken">A token to monitor for cancellation requests.</param>
-    /// <returns>An asynchronous stream of <see cref="ChannelMessage"/> instances.</returns>
-    IAsyncEnumerable<ChannelMessage> ReadAllAsync( CancellationToken cancellationToken = default );
+    IChannelSubscription Subscribe( string? channelId );
 }

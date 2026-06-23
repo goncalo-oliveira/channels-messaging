@@ -18,13 +18,14 @@ internal sealed class ChannelMessageDispatcher(
 
     protected override async Task ExecuteAsync( CancellationToken stoppingToken )
     {
-        await using var subscription = channelSubscriber.Subscribe();
+        await using var subscription = channelSubscriber.Subscribe( Channel.Id );
 
         try
         {
             await foreach ( var message in subscription.ReadAllAsync( stoppingToken ) )
             {
                 // not for us, ignore
+                // shouldn't be possible, but just in case
                 if ( message.ChannelId != Channel.Id )
                 {
                     continue;
