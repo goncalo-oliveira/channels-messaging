@@ -7,8 +7,8 @@ internal sealed class TestSubscriber : IChannelSubscriber
 {
     private readonly Channel<ChannelMessage> channel = Channel.CreateUnbounded<ChannelMessage>();
 
-    public IChannelSubscription Subscribe()
-        => new Subscription( channel );
+    public Task<IChannelSubscription> SubscribeAsync( string? channelId )
+        => Task.FromResult<IChannelSubscription>( new Subscription( channel ) );
 
     public ValueTask PublishAsync( ChannelMessage message )
         => channel.Writer.WriteAsync( message );

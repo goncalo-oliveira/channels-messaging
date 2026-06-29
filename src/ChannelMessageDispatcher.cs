@@ -18,7 +18,7 @@ internal sealed class ChannelMessageDispatcher(
 
     protected override async Task ExecuteAsync( CancellationToken stoppingToken )
     {
-        await using var subscription = channelSubscriber.Subscribe( Channel.Id );
+        await using var subscription = await channelSubscriber.SubscribeAsync( Channel.Id );
 
         try
         {

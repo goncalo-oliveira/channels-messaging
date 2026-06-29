@@ -10,5 +10,5 @@ public interface IChannelSubscriber
     /// </summary>
     /// <param name="channelId">The identifier of the channel to subscribe to. If null, subscribes to all messages.</param>
     /// <returns>An <see cref="IChannelSubscription"/> that can be used to read messages.</returns>
-    IChannelSubscription Subscribe( string? channelId );
+    Task<IChannelSubscription> SubscribeAsync( string? channelId );
 }
